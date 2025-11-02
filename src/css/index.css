@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: Burbank-Black;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/Burbank\ Big\ Regular\ Black.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Burbank";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/Burbank\ Big\ Condensed\ Black.woff2") format("woff2");
+}
+
+@theme {
+  --font-burbank-black: "Burbank-Black", sans-serif;
+  --font-burbank: "Burbank", sans-serif;
+  --font-OpenSans: "OpenSans", sans-serif;
+}
+
+:root {
+  -webkit-user-select: none;
+  user-select: none;
+  overflow-x: hidden;
+  font-family: "OpenSans", sans-serif;
+}
+
+.dontScroll {
+  overflow: hidden !important;
+  position: fixed !important;
+}
+
+.movingshit {
+  animation: movingshit 100s linear 0s infinite normal both running
+}
+
+@keyframes movingshit {
+  0% {
+    transform: translate3d(0%, 0%, 1px);
+  }
+  50% {
+    transform: translate3d(-50%, -50%, 1px);
+  }
+  100% {
+    transform: translate3d(0%, 0%, 1px);
+  }
+}
