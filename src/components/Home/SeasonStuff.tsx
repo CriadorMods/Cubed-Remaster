@@ -35,7 +35,7 @@ const SeasonStuff: React.FC = () => {
                     duration: 0.5,
                     delay: 0.1
                 }}
-                className="w-full md:w-[70%] uppercase m-auto text-[2.7vw] md:text-[1.2vw] leading-5 md:leading-5.5 text-black font-burbank-black">
+                className="w-full md:w-[70%] uppercase m-auto text-[2.7vw] md:text-[1.2vw] leading-tight md:leading-normal text-black font-burbank-black">
                     After the Alien Mothership’s destruction, the Cubes that powered it crash-
                     landed on the Island. They’ve begun spreading corruption, as well as
                     portals to the dark, monster-filled “Sideways.” Fight for the survival of the
@@ -74,7 +74,7 @@ const SeasonStuff: React.FC = () => {
                     duration: 0.5,
                     delay: 0.1
                 }}
-                className="w-full md:w-[70%] uppercase m-auto text-[2.7vw] md:text-[1.2vw] leading-5 md:leading-5.5 text-black font-burbank-black">
+                className="w-full md:w-[70%] uppercase m-auto text-[2.7vw] md:text-[1.2vw] leading-tight md:leading-normal text-black font-burbank-black">
                     You’ll encounter a new location ensnared by The Sideways each match, or
                     come across Sideways Anomalies, gateways that will pull you in if you get
                     too close. Once pulled in, defeat waves of Cube Monsters for Sideways
@@ -114,7 +114,7 @@ const SeasonStuff: React.FC = () => {
                     duration: 0.5,
                     delay: 0.1
                 }}
-                className="w-full md:w-[70%] uppercase m-auto text-[2.7vw] md:text-[1.2vw] leading-5 md:leading-5.5 text-black font-burbank-black">
+                className="w-full md:w-[70%] uppercase m-auto text-[2.7vw] md:text-[1.2vw] leading-tight md:leading-normal text-black font-burbank-black">
                     While defeating the Cube Monsters, open up Sideways Chests to acquire weapons from that world, like the Sideways Rifle and Sideways Minigun.
                     You’ll deal bonus damage by revving them to their superpowered state!
                     Use Cube Monster Parts from defeated monsters to upgrade them, 
@@ -153,7 +153,7 @@ const SeasonStuff: React.FC = () => {
                     duration: 0.5,
                     delay: 0.1
                 }}
-                className="w-full md:w-[70%] uppercase m-auto text-[2.7vw] md:text-[1.2vw] leading-5 md:leading-5.5 text-black font-burbank-black">
+                className="w-full md:w-[70%] uppercase m-auto text-[2.7vw] md:text-[1.2vw] leading-tight md:leading-normal text-black font-burbank-black">
                     To fight back against the Cubes, the Island’s survivors need your help. 
                     Work together with the entire Fortnite community to build Turret Stations, 
                     to decide which new weapons to bring to the Island, 
@@ -192,7 +192,7 @@ const SeasonStuff: React.FC = () => {
                     duration: 0.5,
                     delay: 0.1
                 }}
-                className="w-full md:w-[70%] uppercase m-auto text-[2.7vw] md:text-[1.2vw] leading-5 md:leading-5.5 text-black font-burbank-black">
+                className="w-full md:w-[70%] uppercase m-auto text-[2.7vw] md:text-[1.2vw] leading-tight md:leading-normal text-black font-burbank-black">
                     Wanting to show his creativity in an increasingly cubical world, 
                     Toona Fish is ready to go beyond black-and-white. With the Chapter 2 Season 8 Battle Pass, 
                     you’re able to unlock the free-spirited Toona Fish. 
