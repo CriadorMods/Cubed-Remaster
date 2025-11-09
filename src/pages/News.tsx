@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 // Assets
 import CutsNews from "@/assets/CutsNews.png";
@@ -15,6 +16,11 @@ const News: React.FC = () => {
   const { news } = useNewsStore();
 
   return (
+    <>
+    <Helmet>
+      <title>Fortnite News - The Latest Blog Announcements</title>
+    </Helmet>
+
     <div className="mt-[3.2rem] w-screen flex flex-col justify-start items-center bg-[#f1f4f6] min-h-[calc(100vh-51.2px)]">
       <div className="w-[90%] lg:w-[62%] grid grid-cols-1 lg:grid-cols-2 gap-8 my-10">
 
@@ -42,11 +48,11 @@ const News: React.FC = () => {
             />
 
             <div
-            className={`absolute flex flex-col gap-2 left-0 -bottom-8 leading-0 
-              ${index !== 0 ? 'p-[1.8em] group-hover:-translate-y-5' : 'p-[3em] sm:p-[4em] group-hover:-translate-y-7'} 
+            className={`absolute flex flex-col gap-2 left-0 -bottom-8 leading-0 group-hover:-translate-y-7 
+              ${index !== 0 ? "p-[2.5em]" : "p-[3em] sm:p-[4em]"} 
               transition-all ease-in-out duration-300`}
             >
-              <div className="flex font-burbank-black uppercase text-[1.15em] gap-3 text-white text-center">
+              <div className="flex font-burbank-black uppercase text-[1.15em] gap-3 -translate-y-1.5 text-white text-center">
                 {new Date(post.created_at).toLocaleDateString("en-US", {
                   year: "numeric",
                   month: "short",
@@ -54,9 +60,7 @@ const News: React.FC = () => {
                 })}
               </div>
               <h1 
-              className={`font-burbank-black text-white tracking-wide uppercase
-                ${index !== 0 ? 'text-[2.8em] leading-14' : 'text-[3.5em] leading-18'}
-              `}
+              className={`${index !== 0 ? "text-[2em] sm:text-[3em]" : "text-[2em] sm:text-[3.5em]" } font-burbank-black text-white tracking-wide uppercase leading-8 sm:leading-13`}
               >
                 {post.header}
               </h1>
@@ -67,6 +71,7 @@ const News: React.FC = () => {
 
       </div>
     </div>
+    </>
   );
 };
 

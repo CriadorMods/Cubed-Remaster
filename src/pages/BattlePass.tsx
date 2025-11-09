@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 // Components
 import Skins from "@/components/BattlePass/Skins";
@@ -15,6 +16,19 @@ const BattlePass: React.FC = () => {
   }, []);
 
   return (
+    <>
+    <Helmet>
+      <title>Fortnite Battle Pass | Cubed Season</title>
+      <meta name="title" content="Get the Chapter 2 Season 8 Fortnite Battle Pass for 950 V-Bucks!" />
+      <meta name="description" content="The Fortnite Season 8 Battle Pass is available for 950 V-Bucks and you immediately unlock Charlotte. Earn levels to unlock dozens of in-game items and up to 1,500 V-Bucks! Play the Cubed Season!"/>
+      <meta property="og:type" content="website"/>
+      <meta property="og:url" content="https://www.epicgames.com/fortnite/battlepass"/>
+      <meta property="og:title" content="Get the Chapter 2 Season 8 Fortnite Battle Pass for 950 V-Bucks!"/>
+      <meta property="og:description" content="The Fortnite Season 8 Battle Pass is available for 950 V-Bucks and you immediately unlock Charlotte. Earn levels to unlock dozens of in-game items and up to 1,500 V-Bucks! Play the Cubed Season!"/>
+      <meta property="og:image" content="https://cdn2.unrealengine.com/18br-lineup-social-social-1920x1080-dd5febe82f19.jpg"/>
+      <meta property="og:site_name" content="Epic Games' Fortnite" />
+    </Helmet>
+
     <div className="mt-[3.2rem] w-screen flex flex-col justify-start items-center min-h-[calc(100vh-51.2px)]">
         <div className="relative w-full aspect-[9/9] md:aspect-[9/9] lg:aspect-[12/9] xl:aspect-[17/9] flex justify-center items-center overflow-hidden">
             <div className="absolute inset-0 z-1 bg-[#00000066]" 
@@ -132,6 +146,7 @@ const BattlePass: React.FC = () => {
           </button>
         </div>
     </div>
+    </>
   );
 };
 

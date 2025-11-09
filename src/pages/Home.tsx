@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 // Components
 import SeasonStuff from "@/components/Home/SeasonStuff";
@@ -13,6 +14,12 @@ const Home: React.FC = () => {
   }, []);
   
   return (
+
+    <>
+    <Helmet>
+      <title>Fortnite Chapter 2 Season 8 Cubed</title>
+    </Helmet>
+    
     <div className="mt-[3.2rem] w-screen flex flex-col justify-start items-center min-h-[calc(100vh-51.2px)]">
       <div className="relative w-full h-[55vh] md:h-[69vh] xl:h-[93vh] bg-center bg-cover bg-no-repeat flex flex-col justify-end items-center" 
       style={{
@@ -109,6 +116,7 @@ const Home: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

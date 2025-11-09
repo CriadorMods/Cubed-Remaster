@@ -61,6 +61,20 @@ const Nav: React.FC = () => {
           </div>
 
           <div
+            onClick={() => navigate("/fortnite-crew-subscription")}
+            className={`
+                relative px-3.5 hidden md:flex font-bold hover:text-white/95 items-center text-[0.7rem] cursor-pointer after:absolute 
+                after:bottom-0 after:left-0 after:w-full after:h-0 after:bg-[#ffff00] hover:after:h-[5px] after:transition-all 
+                after:duration-250 overflow-hidden tracking-wide
+                ${
+                  location.pathname.includes("/fortnite-crew-subscription") ? "after:h-[5px] text-white/90" : ""
+                }
+                `}
+          >
+            Crew
+          </div>
+
+          <div
             onClick={() => navigate("/news")}
             className={`
                 relative px-3.5 hidden md:flex font-bold hover:text-white/95 items-center text-[0.7rem] cursor-pointer after:absolute 

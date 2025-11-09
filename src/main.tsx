@@ -1,4 +1,5 @@
 import ReactDOM from "react-dom/client";
+import { HelmetProvider, Helmet } from "react-helmet-async";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import "@/css/index.css";
@@ -24,6 +25,7 @@ import News from "@/pages/News";
 import NewsPost from "@/pages/NewsPost";
 import Competitive from "@/pages/Competitive";
 import HypeLeaderboard from "@/pages/HypeLeaderboard";
+import Crew from "@/pages/Subscription";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -34,6 +36,10 @@ const App = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Epic Games' Fortnite</title> {/* this is a default value so if you dont set a value for a page it just defaults to this one :D */}
+      </Helmet>
+
       <Nav />
 
       <AnimatePresence>{downloads && <Downloads />}</AnimatePresence>
@@ -45,6 +51,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/battle-pass/cubed" element={<BattlePass />} />
+        <Route path="/fortnite-crew-subscription" element={<Crew />} />
         <Route path="/news" element={<News />} />
         <Route path="/news/:header" element={<NewsPost />} />
         <Route path="/flux/competitive" element={<Competitive />} />
@@ -59,7 +66,9 @@ const App = () => {
 document.addEventListener("contextmenu", (e) => e.preventDefault());
 
 root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <HelmetProvider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </HelmetProvider>
 );

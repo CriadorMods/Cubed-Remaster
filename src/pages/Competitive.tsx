@@ -1,11 +1,17 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const Competitive: React.FC = () => {
   const navigate = useNavigate()
 
   return (
+    <>
+    <Helmet>
+        <title>Fortnite Competitive</title>
+    </Helmet>
+
     <div className="mt-[3.2rem] w-screen flex flex-col justify-start items-center min-h-[calc(100vh-51.2px)] bg-[#F1F4F6]">
       <div className="relative w-full h-[65vh] bg-center bg-cover bg-no-repeat bg-[url('https://cdn2.unrealengine.com/Fortnite+Esports%2FChapter-2-Season-2%2FMobile_Default-1920x766-5168a52437321b9bd12b0565610fc7de12269361.jpg')] sm:bg-[url('https://cdn2.unrealengine.com/Fortnite+Esports%2FChapter-2-Season-2%2FCarousel_Default-1920x766-ba580574cf0a2842ea3af9544677113584b94636.jpg')]" >
         <div className="absolute max-w-screen md:max-w-[35vw] text-center md:text-left top-1/2 translate-y-[-50%] translate-x-[-50%] md:translate-x-0 left-1/2 md:left-50 font-burbank-black text-white uppercase flex flex-col leading-10 lg:leading-18">
@@ -81,6 +87,7 @@ const Competitive: React.FC = () => {
         </div>
 
     </div>
+    </>
   );
 };
 

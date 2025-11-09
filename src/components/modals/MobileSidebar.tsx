@@ -57,6 +57,15 @@ const MobileSidebar: React.FC = () => {
 
                 <div 
                 onClick={() => {
+                    navigate("/fortnite-crew-subscription");
+                    setMobileSidebar(false);
+                }}
+                className="w-full flex px-6.5 py-2.5 cursor-pointer border-b border-[#333333] text-sm font-medium tracking-wider text-white/70 justify-start items-center uppercase">
+                    Crew
+                </div>
+
+                <div 
+                onClick={() => {
                     navigate("/news");
                     setMobileSidebar(false);
                 }}

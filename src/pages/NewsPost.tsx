@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { Helmet } from "react-helmet-async";
 
 // Utils
 import { createSlug } from "@/utils/string";
@@ -28,6 +29,7 @@ const NewsPost: React.FC = () => {
   const [isFixed, setIsFixed] = useState(false);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const news = async () => {
       try {
         const response = await fetch(
@@ -70,6 +72,11 @@ const NewsPost: React.FC = () => {
   }, []);
 
   return (
+    <>
+    <Helmet>
+      <title>{newsPost?.header}</title>
+    </Helmet>
+
     <div className="mt-[3.2rem] flex flex-col w-screen min-h-[calc(100vh-51.2px)] justify-start items-center">
       <div className="relative w-full">
 
@@ -175,6 +182,7 @@ const NewsPost: React.FC = () => {
               </ReactMarkdown>
         </div>
     </div>
+    </>
   );
 };
 

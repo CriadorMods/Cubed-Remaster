@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 // Components
 import Leaderboard from "@/components/HypeLeaderboard/Leaderboard";
@@ -6,6 +7,11 @@ import Leaderboard from "@/components/HypeLeaderboard/Leaderboard";
 const HypeLeaderboard: React.FC = () => {
 
   return (
+    <>
+    <Helmet>
+      <title>Fortnite Competitive | Hype Leaderboard</title>
+    </Helmet>
+
     <div className="mt-[3.2rem] w-screen flex flex-col justify-start items-center min-h-[calc(100vh-51.2px)] font-burbank-black">
         <div className="w-full min-h-[40vh] sm:min-h-[52vh] bg-gradient-to-r from-[#290a7b] to-[#9a41ff] flex flex-col justify-center items-center lg:[clip-path:polygon(0_0,100%_0,100%_100%,0_90%)]">
 
@@ -30,6 +36,7 @@ const HypeLeaderboard: React.FC = () => {
 
         <Leaderboard />
     </div>
+    </>
   );
 };
 

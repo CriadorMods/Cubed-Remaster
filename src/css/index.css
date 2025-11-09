@@ -48,3 +48,36 @@
     transform: translate3d(0%, 0%, 1px);
   }
 }
+
+.moveright {
+  animation: moveright 200s linear 0s infinite normal both running
+}
+
+.moveleft {
+  animation: moveleft 200s linear 0s infinite normal both running
+}
+
+@keyframes moveright {
+  0% {
+    transform: translate3d(0%, 0%, 1px);
+  }
+  
+  50% {
+    transform: translate3d(-50%, 0%, 1px);
+  }
+  100% {
+    transform: translate3d(0%, 0%, 1px);
+  }
+}
+
+@keyframes moveleft {
+  0% {
+    transform: translate3d(0%, 0%, 1px);
+  }
+  50% {
+    transform: translate3d(50%, 0%, 1px);
+  }
+  100% {
+    transform: translate3d(0%, 0%, 1px);
+  }
+}
